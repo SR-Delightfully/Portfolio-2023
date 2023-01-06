@@ -38,7 +38,6 @@ const AboutMe = () => {
               and art can be made out of anything.
             </p>
             <p>
-              {" "}
               I've worked as a cashier for several years before deciding to make
               a switch into the tech industry. After participating in a bootcamp
               for web development I got a taste for learning again and decided
@@ -46,7 +45,6 @@ const AboutMe = () => {
             </p>
             <p> I'm hoping to return to school this coming fall.</p>
             <p>
-              {" "}
               In the meantime, I'm looking to gain experience and develop my
               skills through internships and/or a part-time jobs.
             </p>
