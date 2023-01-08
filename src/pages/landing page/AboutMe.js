@@ -54,7 +54,7 @@ const AboutMe = () => {
             <h2>Or you’re curious about working with me</h2>
             <Link
               to={{
-                pathname: "/portfolio/contact-me",
+                pathname: "/portfolio-2023/contact-me",
               }}
             >
               <ButtonAccent>Contact Me</ButtonAccent>

@@ -28,25 +28,25 @@ const App = () => {
         {/* <Palette /> */}
         <Routes>
           <Route
-            path="/portfolio"
+            path="/portfolio-2023"
             element={<LandingPage className="landing" portraits={portraits} />}
           />
 
           <Route
-            path="/portfolio/gallery"
+            path="/portfolio-2023/gallery"
             element={<GalleryPage className="gallery" Artwork={Artwork} />}
           />
           <Route
-            path="/portfolio/gallery/artworks"
+            path="/portfolio-2023/gallery/artworks"
             element={<ArtGallery className="contact-me" />}
           />
           <Route
-            path="/portfolio/gallery/projects"
+            path="/portfolio-2023/gallery/projects"
             element={<CodingGallery className="contact-me" />}
           />
 
           <Route
-            path="/portfolio/contact-me"
+            path="/portfolio-2023/contact-me"
             element={<ContactMePage className="contact-me" />}
           />
           <Route

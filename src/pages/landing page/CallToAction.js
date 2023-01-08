@@ -23,7 +23,7 @@ const CallToAction = (portraits) => {
           {/* link to art gallery */}
           <Link
             to={{
-              pathname: "/portfolio/gallery/artworks",
+              pathname: "/portfolio-2023/gallery/artworks",
             }}
           >
             <Button className="fill">See Artworks</Button>
@@ -33,7 +33,7 @@ const CallToAction = (portraits) => {
           {/* <Link to="/gallery/projects"> */}
           <Link
             to={{
-              pathname: "/portfolio/gallery/projects",
+              pathname: "/portfolio-2023/gallery/projects",
             }}
           >
             <Button className="fill">See Projects</Button>

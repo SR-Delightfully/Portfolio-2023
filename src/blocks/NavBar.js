@@ -9,21 +9,21 @@ const NavBar = (icon) => {
     <Wrapper>
       <TabWrapper>
         <Tab>
-          <Link to="/portfolio">
+          <Link to="/portfolio-2023">
             <TiHome />
           </Link>
         </Tab>
         <Tab>
-          <Link to="/portfolio/gallery">
+          <Link to="/portfolio-2023/gallery">
             <TiThLarge />
           </Link>
         </Tab>
         <Tab>
-          <Link to="/portfolio/contact-me">
+          <Link to="/portfolio-2023/contact-me">
             <TiMail />
           </Link>
         </Tab>
-        <Link to="/portfolio">
+        <Link to="/portfolio-2023">
           <Logo>
             <Img src={icon.icon} />
           </Logo>
