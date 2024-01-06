@@ -1,78 +1,150 @@
 import React from "react";
 import styled from "styled-components";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
 import GlobalStyles from "./GlobalStyles";
 
-import LandingPage from "./pages/landing page/LandingPage";
-import GalleryPage from "./pages/gallery page/GalleryPage";
-import ContactMePage from "./pages/contact-me page/ContactMePage";
-
-import icon from "./images/icon.png";
-import photoPortrait from "./images/photoPortrait.png";
-import drawnPortrait from "./images/drawnPortrait.png";
-
-import NavBar from "./blocks/NavBar";
-import Palette from "./blocks/Palette";
-import Artwork from "./Artwork";
-import ArtGallery from "./pages/gallery page/ArtGallery";
-import CodingGallery from "./pages/gallery page/CodingGallery";
-
+import { FaInstagram, FaTwitter, FaPatreon, FaPaypal } from "react-icons/fa";
 const App = () => {
-  const portraits = [photoPortrait, drawnPortrait];
+  //   <LinkBar className="links">
+  //   <Link className="link">
+  //     {/* <BiLogoInstagram /> */}
+  //     <span>
+  //       <FaInstagram />
+  //     </span>
+  //     <a
+  //       href="https://www.instagram.com/delightfully_sr/"
+  //       target="blank"
+  //     >
+  //       Instagram
+  //     </a>
+  //   </Link>
+  //   <Link className="link">
+  //     <span>
+  //       <FaTwitter />
+  //     </span>
+  //     <a href="https://twitter.com/Delightfully_SR" target="blank">
+  //       Twitter
+  //     </a>
+  //   </Link>
+  //   <Link className="link">
+  //     <span>
+  //       <FaPatreon />
+  //     </span>
+  //     <a href="https://patreon.com/Delightfuly_SR" target="blank">
+  //       Patreon
+  //     </a>
+  //   </Link>
+  //   <Link className="link">
+  //     <span>
+  //       <FaPaypal />
+  //     </span>
+  //     <a href="/" target="blank">
+  //       Paypal
+  //     </a>
+  //   </Link>
+  // </LinkBar>
   return (
     <BrowserRouter>
       <GlobalStyles />
-      <Main className="main">
-        <NavBar icon={icon} />
-        {/* <Palette /> */}
-        <Routes>
-          <Route
-            path="/portfolio-2023"
-            element={<LandingPage className="landing" portraits={portraits} />}
-          />
-
-          <Route
-            path="/portfolio-2023/gallery"
-            element={<GalleryPage className="gallery" Artwork={Artwork} />}
-          />
-          <Route
-            path="/portfolio-2023/gallery/artworks"
-            element={<ArtGallery className="contact-me" />}
-          />
-          <Route
-            path="/portfolio-2023/gallery/projects"
-            element={<CodingGallery className="contact-me" />}
-          />
-
-          <Route
-            path="/portfolio-2023/contact-me"
-            element={<ContactMePage className="contact-me" />}
-          />
-          <Route
-            path="*"
-            element={<h1>The Page you're looking for was not found.</h1>}
-          />
-        </Routes>
-      </Main>
+      <Routes>
+        <Route
+          path="/profile"
+          element={
+            <div>
+              <HeroImg src="https://i.imgur.com/RhB5XLR.png" />
+              <LinkBar className="links">
+                <Link
+                  href="https://www.instagram.com/delightfully_sr/"
+                  target="blank"
+                >
+                  <span>
+                    <FaInstagram />
+                  </span>
+                  <p>Instagram</p>
+                </Link>
+                <Link href="https://twitter.com/Delightfully_SR" target="blank">
+                  <span>
+                    <FaTwitter />
+                  </span>
+                  <p>Twitter</p>
+                </Link>
+                <Link href="https://patreon.com/Delightfuly_SR" target="blank">
+                  <span>
+                    <FaPatreon />
+                  </span>
+                  <p>Patreon</p>
+                </Link>
+                <Link
+                  href="https://www.paypal.com/donate/?hosted_button_id=Z6K3YVZTYDEWG"
+                  target="blank"
+                >
+                  <span>
+                    <FaPaypal />
+                  </span>
+                  <p>Paypal</p>
+                </Link>
+              </LinkBar>
+            </div>
+          }
+        />
+      </Routes>
     </BrowserRouter>
   );
 };
-const Main = styled.div`
-  overflow-y: hidden;
-  overflow-x: hidden;
 
-  width: 100vw;
-  max-width: 100%;
-  height: 100vh;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  display: flex;
+const HeroImg = styled.img`
+  max-height: 30rem;
+  max-width: 30rem;
+  z-index: 2;
+`;
+const LinkBar = styled.div`
+  background-color: #00000099;
+  /* display: flex; */
+  /* flex-flow: column nowrap; */
   justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  width: 100%;
+  height: 30rem;
+  padding: 1rem;
+  position: relative;
+  bottom: 1.4rem;
+  border: 0.2rem solid #fff;
+  z-index: 1;
+`;
+const Link = styled.a`
+  background-color: #b3c250;
+  border: 1px solid #fff;
+  height: 4rem;
+  display: flex;
+  justify-content: flex-start;
   align-items: center;
+  gap: 34%;
+  padding-left: 1rem;
+  font-size: 2rem;
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-shadow: 1px 1px;
+  transition: color 1s;
+  cursor: pointer;
+  && > p {
+    color: var(--color-castleton-green);
+  }
+  && > span {
+    position: relative;
+    top: 0.2rem;
+    color: var(--color-castleton-green);
+    transition: all 0.6s;
+  }
+  &&:hover > p {
+    color: var(--color-avocado);
+  }
+  &&:hover > span {
+    font-size: 2.5rem;
+    margin: -0.25rem;
+    /* margin: -0.3rem 0rem -0.3rem -0.3rem; */
+  }
 `;
 
 export default App;

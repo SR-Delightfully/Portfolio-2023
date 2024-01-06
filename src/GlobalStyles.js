@@ -44,8 +44,13 @@ export default createGlobalStyle`
         -webkit-font-smoothing: antialiased;
     }
     html, body {
+      animation: move 60s infinite linear;
         max-width: 100vw;
-        background-color: var(--tone-0);
+        /* background-color: var(--color-castleton-green); */
+        background-image: url('https://i.imgur.com/A3mqPCE.jpg');
+        background-size: cover;
+        background-repeat: repeat-x;
+        
     }
     /* http://meyerweb.com/eric/tools/css/reset/
         v2.0 | 20110126
@@ -88,6 +93,14 @@ export default createGlobalStyle`
     body {
         font-family: sans-serif;
         font-size:24px;
+      
+    }
+    div {
+      display: flex;
+        flex-flow: column nowrap;
+        /* justify-content: center; */
+        align-items: center;
+        padding: 1rem;
     }
     a {
         text-decoration: none;
@@ -95,22 +108,10 @@ export default createGlobalStyle`
     a:hover {
     }
     h1 {
-        /* font-family: sans-serif; */
-        font-size: 3rem;
-        font-family: 'Nunito Sans', sans-serif;
-        display: inline-block;
       }
       h2 {
-        font-family: 'Averia Libre';
-        /* font-family: sans-serif; */
-        font-size: 2rem;
-        font-weight: lighter;
-        display: inline-block;
       }
       h3 {
-        font-family: 'Work Sans', sans-serif;
-        font-size: 1.2rem;
-        display: inline-block;
       }
   /* tones */
   .tone0{
@@ -204,5 +205,13 @@ export default createGlobalStyle`
   }
   .pacificBlue{
     background-color: var(--color-pacific-blue);
+  }
+  @keyframes move {
+    0% {
+      background-position: 0 0; 
+    }
+    100% {
+      background-position: -100vw 0;
+    }
   }
 `;
